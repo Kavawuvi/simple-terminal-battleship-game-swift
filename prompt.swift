@@ -80,7 +80,7 @@ func promptForCoordinates(prompt : String, defaultValue : [Int]) -> [Int] {
     while true {
         print(prompt, terminator:"")
 
-        // Get the coordinates from the player
+        // Get the coordinates from the player and make them lowercase
         let line = readLine()!.lowercased()
         if line == "" {
             print("Auto-targeting \(coordinatesToString(defaultValue))")
@@ -99,7 +99,9 @@ func promptForCoordinates(prompt : String, defaultValue : [Int]) -> [Int] {
             print("You need to enter valid coordinates (must start with a letter)")
             continue
         }
-        let firstCoordinate = Int(letter.asciiValue! - 0x61)
+        
+        // Convert the letter to a coordinate (simply subtract from "a"'s ASCII value)
+        let firstCoordinate = Int(letter.asciiValue! - Character("a").asciiValue!)
 
         // And the number
         if let number = Int(line[line.index(line.startIndex, offsetBy: 1)...]) {
