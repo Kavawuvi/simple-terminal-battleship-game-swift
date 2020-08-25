@@ -4,11 +4,11 @@ This is a simple terminal-based Battleship game written in Swift.
 Starting a game is simple:
 - Input the board size
 - Input the difficulty of the computer
-    0. All shots are random
+    - **(0)** All shots are random
         - Does not consider any previous ships that have been hit
-    1. All shots are random until a ship is found
+    - **(1)** All shots are random until a ship is found
         - Checks the board for unsunk ships that have been hit before searching
-    2. All shots are random along a checkerboard until a ship is found
+    - **(2)** All shots are random along a checkerboard until a ship is found
         - More efficient at locating ships than 1
         - Checkerboard pattern is randomized
 - Randomize your board until you find a board you like
