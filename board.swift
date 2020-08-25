@@ -91,7 +91,7 @@ class Board {
             self.y = y
             self.orientation = orientation
             self.type = type
-            self.board = board;
+            self.board = board
         }
     }
 
